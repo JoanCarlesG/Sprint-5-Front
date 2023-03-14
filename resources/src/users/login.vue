@@ -67,7 +67,7 @@ export default {
     },
     methods: {
         login() {
-            axios.post('http://127.0.0.1:8000/api/login', this.user)
+            axios.post('http://64.227.40.58/api/login', this.user)
                 .then(response => {
                     localStorage.setItem('token', response.data.token);
                     localStorage.setItem('user', JSON.stringify(response.data.user));

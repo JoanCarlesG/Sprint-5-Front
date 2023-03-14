@@ -110,7 +110,7 @@ export default {
     },
     created() {
         const token = localStorage.getItem('token');
-        axios.get('/api/players/ranking', {
+        axios.get('http://64.227.40.58/api/players/ranking', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -122,7 +122,7 @@ export default {
             .catch((error) => {
                 console.log(error);
             });
-        axios.get('/api/players/ranking/winner', {
+        axios.get('http://64.227.40.58/api/players/ranking/winner', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -134,7 +134,7 @@ export default {
             .catch((error) => {
                 console.log(error);
             })
-        axios.get('/api/players/ranking/loser', {
+        axios.get('http://64.227.40.58/api/players/ranking/loser', {
             headers: {
                 Authorization: `Bearer ${token}`,
             }

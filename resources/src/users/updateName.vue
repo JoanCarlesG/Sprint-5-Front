@@ -47,7 +47,7 @@ export default {
             let user = JSON.parse(localStorage.getItem('user'));
             let id = user.id;
             let token = localStorage.getItem('token');
-            axios.put('api/players/' + id, { name: this.form.name }, {
+            axios.put('http://64.227.40.58/api/players/' + id, { name: this.form.name }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }

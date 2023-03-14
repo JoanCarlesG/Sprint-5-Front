@@ -73,7 +73,7 @@ export default {
     methods: {
         register() {
             if (this.user.password === this.user.c_password) {
-                axios.post('/api/players', this.user)
+                axios.post('http://64.227.40.58/api/players', this.user)
                     .then(response => {
                         alert(response.data.message);
                         this.$router.push({ name: 'login' })

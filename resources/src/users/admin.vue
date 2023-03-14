@@ -53,7 +53,7 @@ export default {
     },
     created() {
         const token = localStorage.getItem('token');
-        axios.get('/api/players', {
+        axios.get('http://64.227.40.58/api/players', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },

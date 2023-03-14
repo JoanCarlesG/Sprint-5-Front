@@ -81,7 +81,7 @@ export default {
         const user = JSON.parse(localStorage.getItem('user'));
         const id = user.id;
         const token = localStorage.getItem('token');
-        axios.get('api/players/' + id + '/games', {
+        axios.get('http://64.227.40.58/api/players/' + id + '/games', {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -107,7 +107,7 @@ export default {
             let user = JSON.parse(localStorage.getItem('user'));
             let id = user.id;
             let token = localStorage.getItem('token');
-            axios.post('api/players/' + id + '/games', this.data, {
+            axios.post('http://64.227.40.58/api/players/' + id + '/games', this.data, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -126,7 +126,7 @@ export default {
             let user = JSON.parse(localStorage.getItem('user'));
             let id = user.id;
             let token = localStorage.getItem('token');
-            axios.delete('api/players/' + id + '/games', {
+            axios.delete('http://64.227.40.58/api/players/' + id + '/games', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
